@@ -1,0 +1,27 @@
+# Ignore these output/temporary directories
+
+tmp/
+**/tmp/
+
+out/
+**/out/
+
+## Ignore directories inside the `prod` directory
+
+
+# Stupid directories
+
+## From pycharm
+.idea/
+.ipynb_checkpoints/
+**/.idea
+
+## From python
+__pycache__/
+**/__pycache__
+**/__pycache__/
+
+## From notebooks
+**/.ipynb_checkpoints
+**/.ipynb_checkpoints/
+
