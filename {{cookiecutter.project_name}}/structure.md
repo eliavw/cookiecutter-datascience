@@ -22,8 +22,7 @@ Layout for machine learning research projects.
         +--step-01
         +--step-02
 +-- src
-    +-- package_name_01
-    +-- package_name_02
+    +-- {{cookiecutter.package_name}}
 +-- test
 |
 +-- .gitignore
