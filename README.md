@@ -12,19 +12,6 @@ Using the power of both `PyScaffold` and `cookiecutter` templates, this single c
 putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown
 ```
 
-### Github
-
-Create an empty repository on github, then;
-
-```bash
-git init
-git add .
-git commit -m "First commit"
-git remote add origin <remote repository URL>
-git remote -v
-git push origin master
-```
-
 ## Todo
 
 - CI workflow
