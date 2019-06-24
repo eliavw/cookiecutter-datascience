@@ -9,7 +9,7 @@ Cookiecutter template for datascience
 Using the power of both `PyScaffold` and `cookiecutter` templates, this single command provides a pretty solid starting point for any new project.
 
 ```bash
-putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown
+putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown --travis
 ```
 
 ## Todo
