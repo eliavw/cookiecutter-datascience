@@ -10,7 +10,7 @@ Create an empty repository on github, then;
 git init
 git add .
 git commit -m "First commit"
-git remote add origin eliavw/{{cookiecutter.project_name}}
+git remote add origin git remote add origin git@github.com:eliavw/{{project_name}}.git
 git remote -v
 git push origin master
 ```
