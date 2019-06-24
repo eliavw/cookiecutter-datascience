@@ -1,6 +1,19 @@
 # Deployment Information
 
-We use conda for dependency management.
+We use git for versioning and conda for package managment.
+
+## Github init
+
+Create an empty repository on github, then;
+
+```bash
+git init
+git add .
+git commit -m "First commit"
+git remote add origin eliavw/{{cookiecutter.project_name}}
+git remote -v
+git push origin master
+```
 
 ## Create
 
