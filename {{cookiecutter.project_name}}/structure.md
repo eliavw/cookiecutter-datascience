@@ -1,6 +1,6 @@
 # Project Structure
 
-My layout for machine learning research projects.
+Layout for machine learning research projects.
 
 ```
 .
