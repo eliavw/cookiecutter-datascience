@@ -4,7 +4,7 @@ Cookiecutter template for datascience
 
 ## Workflow
 
-Using the power of both PyScaffold and cookiecutter template, this single command provides a pretty solid starting ground for any new project.
+Using the power of both `PyScaffold` and `cookiecutter` templates, this single command provides a pretty solid starting ground for any new project.
 
 ```bash
 putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown
