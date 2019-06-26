@@ -1,8 +1,10 @@
-# Deployment Information
+Deployment Information
+======================
 
 We use git for versioning and conda for package managment.
 
-## Github init
+Version Control
+---------------
 
 Create an empty repository on github, then;
 
@@ -15,7 +17,8 @@ git remote -v
 git push origin master
 ```
 
-## Create
+Dependency Managment + Environments
+-----------------------------------
 
 Environment made with conda. To make an environment;
 
@@ -23,7 +26,7 @@ Environment made with conda. To make an environment;
 conda create --name {{cookiecutter.project_name}} python=3.7 ipykernel
 ```
 
-## Export
+### Export
 This environment can be exported to a `.yml` file through the following command:
 
 ```bash
@@ -33,7 +36,7 @@ conda env export > environment.yml
 Which creates the `.yml` file present in the root dir.
 
 
-## Load
+### Load
 To recreate this environment, it suffices to run;
 
 ```bash
@@ -42,7 +45,7 @@ conda env create -f environment.yml -n {{cookiecutter.project_name}}
 
 Which presupposes a miniconda on your own machine.
 
-## Add kernel to Jupyter
+### Add kernel to Jupyter
 
 To add this python environment to the list of Jupyter environments, do the following. 
 ```bash
@@ -51,3 +54,10 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}} --displa
 ```
 
 _N.b.: This requires ipykernel to be installed in the environment._
+
+
+Continuous Integration - Tests
+------------------------------
+
+Documentation
+-------------
