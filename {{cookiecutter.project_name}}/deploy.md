@@ -20,7 +20,7 @@ git push origin master
 Environment made with conda. To make an environment;
 
 ```bash
-conda create --name {{cookiecutter.project_name}} python=3.7
+conda create --name {{cookiecutter.project_name}} python=3.7 ipykernel
 ```
 
 ## Export
