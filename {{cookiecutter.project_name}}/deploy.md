@@ -17,8 +17,8 @@ git remote -v
 git push origin master
 ```
 
-Dependency Managment + Environments
------------------------------------
+Reproducibility
+---------------
 
 Environment made with conda. To make an environment;
 
@@ -55,9 +55,31 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}} --displa
 
 _N.b.: This requires ipykernel to be installed in the environment._
 
+Dependency Managment
+--------------------
+
+For a pip install, you also need some kind of reproducibility. What matters there is the fact that you need to list your abstract dependencies. This needs to be done in the `setup.cfg` file.
+
 
 Continuous Integration - Tests
 ------------------------------
 
 Documentation
 -------------
+
+Install sphinx, if necessary. Obviously, no need to do this explicitly in your isolated environment, that will just bloat everything.
+
+```bash
+conda install sphinx
+```
+
+Then render the docs as
+
+```bash
+python setup.py docs
+```
+
+Publish
+-------
+
+To upload the final product to pip, first edit the `setup.cfg` file.
