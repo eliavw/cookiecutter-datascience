@@ -6,7 +6,15 @@ We use git for versioning and conda for package managment.
 Version Control
 ---------------
 
-Create an empty repository on github, then;
+First, create an empty repository on github, e.g.: `eliavw/{{cookiecutter.project_name}}`.
+
+Then, add the following lines to `.gitignore`,
+
+```bash
+.ipynb_checkpoints
+
+```
+
 
 ```bash
 git init
