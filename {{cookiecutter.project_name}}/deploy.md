@@ -12,8 +12,9 @@ Then, add the following lines to `.gitignore`,
 
 ```bash
 .ipynb_checkpoints
-
 ```
+
+to ignore the useless checkpoint folders.
 
 
 ```bash
