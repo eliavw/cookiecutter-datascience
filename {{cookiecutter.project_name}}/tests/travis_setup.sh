@@ -27,13 +27,14 @@ conda update --yes conda
 # Create a local environment from the environment.yml file.
 
 echo "Recreate conda environment in Travis servers"
-conda env create -p ./.conda -f dependencies-deploy.yaml -n {{cookiecutter.project_name}}
+conda env create -f dependencies-deploy.yaml -n {{cookiecutter.project_name}}
 echo "Recreation done"
 
 # Conda activate does not work, use source instead.
-echo "Activating new env now"
-source activate ./.conda
+echo "Add development packages"
+source activate {{cookiecutter.project_name}}
 conda env update -n {{cookiecutter.project_name}} -f dependencies-develop.yaml
+echo "Development packages OK. Environment active."
 
 travis-cleanup() {
     printf "Cleaning up environments ... "  # printf avoids new lines
