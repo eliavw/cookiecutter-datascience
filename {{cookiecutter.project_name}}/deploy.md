@@ -1,3 +1,72 @@
+# {{cookiecutter.project_name}}
+
+Deployment information.
+
+1 Development workflows
+=======================
+
+1.1 Start project
+-----------------
+
+Using the power of `cookiecutter`, this single command provides a pretty solid starting point for any new project.
+
+```bash
+cookiecutter gh:eliavw/cookiecutter-datascience
+```
+
+1.2 git
+-------
+
+Version control goes without saying. For the local repository, do;
+
+```bash
+git init
+git add .
+git commit -m "First commit"
+```
+
+For the remote repository, do;
+
+```bash
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git
+git remote -v
+git push origin master
+```
+
+And that's it for git.
+
+1.3 CI
+------
+
+Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate CI (i.e. Travis) right from the start.
+
+1.4 Conda environments
+----------------------
+This is a personal preference. This cookiecutter is set up to accomodate conda environments, since they are quite useful for datascience projects. The main message would be `for local dependency/package managment, we use conda and nothing else`
+
+
+2 Distribution workflows
+========================
+
+This part is about publishing your project on PyPi.
+
+2.1 Pypi
+--------
+
+Follow these steps
+
+2.2 Docs
+--------
+Every project needs documentation.
+
+2.3 Docker
+----------
+
+2.4 Singularity
+---------------
+
+
+
 Deployment Information
 ======================
 
