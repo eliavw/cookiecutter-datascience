@@ -2,15 +2,17 @@
 
 Cookiecutter template for datascience
 
-## Workflow
-
-### Creation
+## Initialize project
 
 Using the power of both `PyScaffold` and `cookiecutter` templates, this single command provides a pretty solid starting point for any new project.
 
 ```bash
 putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown --travis
 ```
+
+## CI workflow
+
+This section describes how to set up CI after you initialized your project.
 
 ## Todo
 
