@@ -35,10 +35,15 @@ git push origin master
 
 And that's it for git.
 
-1.3 CI
-------
+1.3 CI (Travis)
+---------------
 
 Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate CI (i.e. Travis) right from the start.
+
+Follow these steps:
+
+1. Go to https://travis-ci.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}
+
 
 1.4 Conda environments
 ----------------------
