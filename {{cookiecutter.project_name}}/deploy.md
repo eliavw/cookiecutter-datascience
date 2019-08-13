@@ -11,7 +11,7 @@ Deployment information.
 Using the power of `cookiecutter`, this single command provides a pretty solid starting point for any new project.
 
 ```bash
-cookiecutter gh:eliavw/cookiecutter-datascience
+cookiecutter gh:{{cookiecutter.github_username}}/cookiecutter-datascience
 ```
 
 1.2 git
