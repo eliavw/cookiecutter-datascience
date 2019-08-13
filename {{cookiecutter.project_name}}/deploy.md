@@ -38,7 +38,7 @@ And that's it for git.
 1.3 Conda Environments
 ----------------------
 
-This cookiecutter is set up for optimal use with [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf), for **local dependency managment**. The takeaway is this; _for local dependency managment, we rely on conda and nothing else'.
+This cookiecutter is set up for optimal use with [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf), for **local dependency managment**. The takeaway is this; _for local dependency managment, we rely on conda and nothing else._
 
 Note that this has nothing to do with **remote dependency managment**. This is what you need to take care of when preparing a _release_ of your code which goes via [PyPi](https://pypi.org/) or alternatives. We treat that as an independent problem. Mixing remote and local dependency managment tends to add complexity instead of removing it.
 
