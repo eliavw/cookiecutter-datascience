@@ -27,7 +27,7 @@ conda update --yes conda
 # Create a local environment from the environment.yml file.
 
 echo "Recreate conda environment in Travis servers"
-conda env create -p ./.conda -f environment.yml
+conda env create -p ./.conda -f dependencies-deploy.yaml
 echo "Recreation done"
 
 # Conda activate does not work, use source instead.

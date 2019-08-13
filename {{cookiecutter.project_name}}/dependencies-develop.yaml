@@ -1,0 +1,9 @@
+name: {{cookiecutter.project_name}} 
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - jupyterlab
+  - sphinx
+  - recommonmark

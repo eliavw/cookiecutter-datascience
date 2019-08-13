@@ -12,7 +12,3 @@ dependencies:
   - ipython
   - matplotlib
   - scikit-learn
-  # for development only (could also be kept in a separate environment file)
-  - jupyterlab
-  - sphinx
-  - recommonmark
