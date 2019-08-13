@@ -4,5 +4,6 @@
     "author_name": "Elia vw",
     "author_email": "elia.vw@gmail.com",
     "travis_email": "elia.vanwolputte@gmail.com",
-    "github_username": "eliavw"
+    "github_username": "eliavw",
+    "short_description": "A short description of this piece of code."
 }
