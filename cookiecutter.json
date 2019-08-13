@@ -3,5 +3,6 @@
     "package_name": "package-name",
     "author_name": "Elia vw",
     "author_email": "elia.vw@gmail.com",
-    "travis_email": "elia.vanwolputte@gmail.com"
+    "travis_email": "elia.vanwolputte@gmail.com",
+    "github_username": "eliavw"
 }
