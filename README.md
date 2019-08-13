@@ -2,10 +2,11 @@
 
 Cookiecutter template for datascience
 
-1. Development workflows
-------------------------
+1 Development workflows
+=======================
 
-## 1. Initialize project
+1.1 Start project
+-----------------
 
 Using the power of both `PyScaffold` and `cookiecutter` templates, this single command provides a pretty solid starting point for any new project.
 
@@ -13,19 +14,37 @@ Using the power of both `PyScaffold` and `cookiecutter` templates, this single c
 putup project-name --cookiecutter gh:eliavw/cookiecutter-datascience --markdown --travis
 ```
 
-## 2. CI workflow
+1.2 git
+-------
 
-This section describes how to set up CI after you initialized your project.
+Version control goes without saying.
 
-## Docs workflow
+1.3 CI
+------
 
-Here we explain how to set up automatic documentation for your project.
+Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate CI (i.e. Travis) right from the start.
 
-## 
+1.4 Conda environments
+----------------------
+This is a personal preference. This cookiecutter is set up to accomodate conda environments, since they are quite useful for datascience projects. The main message would be `for local dependency/package managment, we use conda and nothing else`
 
-## Todo
 
-- CI workflow
-- Doc workflow
-- Reproducibility 01 workflow (tracking packages)
-- Reproducibility 02 singularity or Docker workflow 
+2 Distribution workflows
+========================
+
+This part is about publishing your project on PyPi.
+
+2.1 Pypi
+--------
+
+Follow these steps
+
+2.2 Docs
+--------
+Every project needs documentation.
+
+2.3 Docker
+----------
+
+2.4 Singularity
+---------------
