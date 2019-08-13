@@ -1,4 +1,5 @@
-# cookiecutter-datascience
+Cookiecutter-datascience
+========================
 
 Cookiecutter template for datascience
 
