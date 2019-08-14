@@ -8,7 +8,7 @@ Deployment information.
 1.1 Start project
 -----------------
 
-Using the power of `cookiecutter`, this single command provides a pretty solid starting point for any new project.
+Using the power of [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), this single command provides a pretty solid starting point for any new project.
 
 ```bash
 cookiecutter gh:{{cookiecutter.github_username}}/cookiecutter-datascience
