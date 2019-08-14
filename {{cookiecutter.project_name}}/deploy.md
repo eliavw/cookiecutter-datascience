@@ -25,12 +25,6 @@ git add .
 git commit -m "First commit"
 ```
 
-or alternatively, the one-liner;
-
-```bash
-git init; git add .; git commit -m "First commit";
-```
-
 For the remote repository, do;
 
 ```bash
@@ -40,6 +34,20 @@ git push origin master
 ```
 
 And that's it for git.
+
+### One-liners
+
+We can summarize the above procedure in two one-liners, should you really care about doing this fast.
+
+```bash
+git init; git add .; git commit -m "First commit";
+```
+
+and
+
+```bash
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git; git remote -v; git push origin master
+```
 
 1.3 Conda Environments
 ----------------------
