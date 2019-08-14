@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - pytorch
 dependencies:
+  - pytest
   - jupyterlab
   - sphinx
   - recommonmark
