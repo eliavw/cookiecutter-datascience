@@ -1,4 +1,4 @@
-name: {{cookiecutter.project_name}} 
+name: {{cookiecutter.project_name}}
 channels:
   - defaults
   - conda-forge
@@ -6,5 +6,5 @@ channels:
 dependencies:
   - pytest
   - jupyterlab
-  - sphinx
-  - recommonmark
+  - mkdocs
+  - mkdocs-material
