@@ -41,7 +41,7 @@ travis-cleanup() {
     if [[ "$DISTRIB" == "conda" ]]; then
     # Force the env to be recreated next time, for build consistency
         source deactivate
-        conda remove -p ./.conda --all --yes
+        conda remove -n {{cookiecutter.project_name}} --all --yes
         rm -rf ./.conda
     fi
     echo "DONE"
