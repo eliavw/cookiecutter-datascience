@@ -85,7 +85,7 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}} --displa
 1.4 CI (Travis)
 ---------------
 
-Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate CI (i.e. Travis) right from the start.
+Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate [CI]() (i.e. [Travis](https://travis-ci.com)) right from the start.
 
 Follow these steps:
 
@@ -105,6 +105,24 @@ This part is about publishing your project on PyPi.
 --------
 
 Make your project publicly available on the Python Package Index, [PyPi](https://pypi.org/). To achieve this, we need **remote dependency managment**, since you want your software to run without forcing the users to recreate your conda environments. All dependencies have to be managed, automatically, during installation. To make this work, we need to do some extra work.
+
+We follow the steps as outlined in the most basic (and official) [PyPi tutorial](https://packaging.python.org/tutorials/packaging-projects/).
+
+### Generate distribution archives
+
+Generate distribution packages for the package. These are archives that are uploaded to the Package Index and can be installed by pip.
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+After this, your package can be uploaded to the python package index. This is as easy as:
+
+```bash
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+and this will prompt some questions, but your package will end up in the index.
 
 
 2.2 Docs
