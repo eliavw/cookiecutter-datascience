@@ -103,8 +103,14 @@ This means that even our own code has to be installed before we are able to use 
 To install, activate the conda environment and execute this line of code.
 
 ```bash
-python setup.py install # or `develop`
+python setup.py develop # or `install`
 ```
+
+What is the difference between `develop` or `install`? When you install the package with the `develop` flag, symlinks are created from yoru code to the python installation. That means that every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you'd want: to see your changes reflected immediately.
+
+The install option just copies your code as it is at time of installation and install the package in the python environment. This mimics what a third party would do.
+
+
 
 
 1.5 CI (Travis)
