@@ -118,5 +118,11 @@ python setup.py docs
 2.3 Docker
 ----------
 
+
 2.4 Singularity
 ---------------
+
+
+2.5 Website
+-----------
+A more serious project can benefit from an additional website, apart from the documentation site.
