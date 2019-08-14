@@ -73,6 +73,15 @@ conda activate {{cookiecutter.project_name}}
 conda env update -n {{cookiecutter.project_name}} -f dependencies-develop.yaml
 ```
 
+### Jupyterlab
+
+To add your isolated python installation (i.e., the one in your new conda environment) to the list of "kernels" found by Jupyter, execute the following.
+
+```bash
+conda activate {{cookiecutter.project_name}}
+python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
+```
+
 1.4 CI (Travis)
 ---------------
 
@@ -86,10 +95,6 @@ Follow these steps:
 **Note:** The tests depend on our **local dependecy managment**. Why? Because we have full control of the Travis servers running our tests. Therefore, we can simply treat it as a computer we'd control. We only need to fall back on remote dependency managment if other people need to get our code up and running, without our intervention.
 
 
-1.4 Conda environments
-----------------------
-
-
 
 2 Distribution workflows
 ========================
@@ -99,111 +104,19 @@ This part is about publishing your project on PyPi.
 2.1 Pypi
 --------
 
-Follow these steps
+Make your project publicly available on the Python Package Index, [PyPi](https://pypi.org/). To achieve this, we need **remote dependency managment**, since you want your software to run without forcing the users to recreate your conda environments. All dependencies have to be managed, automatically, during installation. To make this work, we need to do some extra work.
+
 
 2.2 Docs
 --------
-Every project needs documentation.
+Every good open source project at least consists of a bit of documentation. A part of this documentation is generated from decent docstrings you wrote together with your code.
+
+```bash
+python setup.py docs
+```
 
 2.3 Docker
 ----------
 
 2.4 Singularity
 ---------------
-
-
-
-Deployment Information
-======================
-
-We use git for versioning and conda for package managment.
-
-Version Control
----------------
-
-First, create an empty repository on github, e.g.: `eliavw/{{cookiecutter.project_name}}`.
-
-Then, add the following lines to `.gitignore`,
-
-```bash
-.ipynb_checkpoints
-```
-
-to ignore the useless checkpoint folders.
-
-
-```bash
-git init
-git add .
-git commit -m "First commit"
-git remote add origin git@github.com:eliavw/{{cookiecutter.project_name}}.git
-git remote -v
-git push origin master
-```
-
-Reproducibility
----------------
-
-Environment made with conda. To make an environment;
-
-```bash
-conda create --name {{cookiecutter.project_name}} python=3.7 ipykernel
-```
-
-### Export
-This environment can be exported to a `.yml` file through the following command:
-
-```bash
-conda env export > environment.yml
-```
-
-Which creates the `.yml` file present in the root dir.
-
-
-### Load
-To recreate this environment, it suffices to run;
-
-```bash
-conda env create -f environment.yml -n {{cookiecutter.project_name}} 
-```
-
-Which presupposes a miniconda on your own machine.
-
-### Add kernel to Jupyter
-
-To add this python environment to the list of Jupyter environments, do the following. 
-```bash
-source activate {{cookiecutter.project_name}}
-python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
-```
-
-_N.b.: This requires ipykernel to be installed in the environment._
-
-Dependency Managment
---------------------
-
-For a pip install, you also need some kind of reproducibility. What matters there is the fact that you need to list your abstract dependencies. This needs to be done in the `setup.cfg` file.
-
-
-Continuous Integration - Tests
-------------------------------
-
-Documentation
--------------
-
-Install sphinx, if necessary. Obviously, no need to do this explicitly in your isolated environment, that will just bloat everything.
-
-```bash
-conda install sphinx
-```
-
-Then render the docs as
-
-```bash
-python setup.py docs
-```
-
-Publish
--------
-
-To upload the final product to pip, first edit the `setup.cfg` file.
