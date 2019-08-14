@@ -82,10 +82,41 @@ conda activate {{cookiecutter.project_name}}
 python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
 ```
 
-1.4 CI (Travis)
+1.4 Local Installation
+----------------------
+
+One fundamental assumption is the following; 
+
+> All code in this repository is a) part of a python package or b) a standalone script.
+
+- Code in [src](./src) is considered as a Python package.
+- Code in [scripts](./scripts) or [note](./note), the code acts as standalone scripts.
+
+This means that even our own code has to be installed before we are able to use it. This seems a bit tedious but has some important advantages too:
+
+1. Our scripts will consider our own algorithms and external competitors just as packages that have to be imported. This forces us to explicitly declare everything we want to use.
+2. Since our own algorithm will have to behave just like the competition, this enhances modularity in our code.
+3. If we build it like a package from the start on our local machine, the transition to an actual package will be a lot smoother afterwards.
+
+### Installation instructions
+
+To install, activate the conda environment and execute this line of code.
+
+```bash
+python setup.py develop # or `install`
+```
+
+What is the difference between `develop` or `install`? When you install the package with the `develop` flag, symlinks are created from yoru code to the python installation. That means that every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you'd want: to see your changes reflected immediately.
+
+The install option just copies your code as it is at time of installation and install the package in the python environment. This mimics what a third party would do.
+
+
+
+
+1.5 CI (Travis)
 ---------------
 
-Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate [CI]() (i.e. [Travis](https://travis-ci.com)) right from the start.
+Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate [CI](https://en.wikipedia.org/wiki/Continuous_integration) (i.e. [Travis](https://travis-ci.com)) right from the start.
 
 Follow these steps:
 
