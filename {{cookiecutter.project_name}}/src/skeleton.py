@@ -21,9 +21,9 @@ import logging
 
 from {{cookiecutter.project_name}} import __version__
 
-__author__ = {{cookiecutter.author_name}}
-__copyright__ = {{cookiecutter.author_name}}
-__license__ = {{cookiecutter.license}}
+__author__ = "{{cookiecutter.author_name}}"
+__copyright__ = "{{cookiecutter.author_name}}"
+__license__ = "{{cookiecutter.license}}"
 
 _logger = logging.getLogger(__name__)
 

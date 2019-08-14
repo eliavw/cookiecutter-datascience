@@ -9,6 +9,7 @@ install:
 
 script:
     - python setup.py develop
+    - pytest tests -v
     - pytest tests/integration/ -v
     - pytest tests/unit/ -v
 

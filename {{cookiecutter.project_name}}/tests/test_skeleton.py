@@ -3,9 +3,9 @@
 import pytest
 from {{cookiecutter.project_name}}.skeleton import fib
 
-__author__ = {{cookiecutter.author_name}}
-__copyright__ = {{cookiecutter.author_name}}
-__license__ = {{cookiecutter.license}}
+__author__ = "{{cookiecutter.author_name}}"
+__copyright__ = "{{cookiecutter.author_name}}"
+__license__ = "{{cookiecutter.license}}"
 
 
 def test_fib():
