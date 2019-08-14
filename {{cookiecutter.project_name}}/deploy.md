@@ -25,6 +25,12 @@ git add .
 git commit -m "First commit"
 ```
 
+or alternatively, the one-liner;
+
+```bash
+git init; git add .; git commit -m "First commit";
+```
+
 For the remote repository, do;
 
 ```bash
