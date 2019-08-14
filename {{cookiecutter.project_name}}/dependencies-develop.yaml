@@ -1,4 +1,4 @@
-name: {{cookiecutter.project_name}}
+name: eliatest
 channels:
   - defaults
   - conda-forge
@@ -8,3 +8,5 @@ dependencies:
   - jupyterlab
   - mkdocs
   - mkdocs-material
+  - pygments
+  - pymdown-extensions

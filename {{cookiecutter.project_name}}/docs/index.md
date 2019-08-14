@@ -1,6 +1,28 @@
-# Welcome to the {{cookiecutter.project_name}} documentation
+# Welcome
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
+
+## Tests
+
+Equations go like this
+
+$$
+e^{i\pi}-1=0
+$$
+
+Code blocks go like this
+
+```python
+msg = "Hello world"
+print(msg)
+```
+
+And you can add all kinds of cool blocks to draw addition to something,
+
+!!! example
+    This is a perfect example of such an `admonition` block as they are called. They come in many types and their icons adapt automagically.
+
+Cf. the github source (click the edit button) to see how all of this came to be.
 
 ## Commands
 
