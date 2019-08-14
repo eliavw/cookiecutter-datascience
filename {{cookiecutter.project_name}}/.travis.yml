@@ -10,8 +10,8 @@ install:
 script:
     - python setup.py develop
     - pytest tests -v
-    - pytest tests/integration/ -v
-    - pytest tests/unit/ -v
+#    - pytest tests/integration/ -v
+#    - pytest tests/unit/ -v
 
 after_script:
     - travis-cleanup
