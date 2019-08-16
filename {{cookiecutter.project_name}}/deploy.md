@@ -192,7 +192,15 @@ and surf to [localhost:8000](localhost:8000). Also note that this server will re
 
 ### Hosting on Github
 
-Now, the last challenge is to make this website available over the internet.
+Now, the last challenge is to make this website available over the internet. Luckily, mkdocs makes this [extremely easy](https://www.mkdocs.org/user-guide/deploying-your-docs/) when you want to host on [github pages](https://pages.github.com/)
+
+```bash
+mkdocs gh-deploy
+```
+
+and your site should be online at; [https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}/](https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}/). 
+
+What happens under the hood is that a `mkdocs build` is executed, and then the resulting `site` directory is pushed to the `gh pages` branch in your repository. From that point on, github takes care of the rest.
 
 2.3 Docker
 ----------
