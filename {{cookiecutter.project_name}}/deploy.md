@@ -147,7 +147,7 @@ Generate distribution packages for the package. These are archives that are uplo
 python setup.py sdist bdist_wheel
 ```
 
-After this, your package can be uploaded to the python package index. This is as easy as:
+After this, your package can be uploaded to the python package index. To see if it works on PyPi test server, do
 
 ```bash
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
@@ -155,6 +155,12 @@ python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 and this will prompt some questions, but your package will end up in the index.
 
+To make your package end up in the actual PyPi, the procedure is almost as simple, do
+
+
+```bash
+python -m twine upload --repository-url https://pypi.org/legacy/ dist/*
+```
 
 2.2 Docs
 --------
