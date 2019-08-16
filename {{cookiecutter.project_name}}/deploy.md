@@ -188,7 +188,7 @@ To preview your website locally, you do
 mkdocs serve
 ```
 
-and surf to [localhost:8000](localhost:8000). Also note that this server will refresh whenever you alter something on disk (which is nice!), and hence does the build command automatically.
+and surf to [localhost:8000](http://localhost:8000). Also note that this server will refresh whenever you alter something on disk (which is nice!), and hence does the build command automatically.
 
 ### Hosting on Github
 
