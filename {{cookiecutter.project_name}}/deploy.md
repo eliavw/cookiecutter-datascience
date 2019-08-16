@@ -209,14 +209,13 @@ Often overlooked, but this is right on top of your repository and hence the abso
 
 > {{cookiecutter.short_description}}, cf. https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}
 
+
 2.3 Docker
 ----------
 
+Reproducible containers in their most popular form.
 
 2.4 Singularity
 ---------------
 
-
-2.5 Website
------------
-A more serious project can benefit from an additional website, apart from the documentation site.
+Reproducible containers which can be run on HPC infrastructures. 
