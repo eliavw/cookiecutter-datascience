@@ -202,6 +202,13 @@ and your site should be online at; [https://{{cookiecutter.github_username}}.git
 
 What happens under the hood is that a `mkdocs build` is executed, and then the resulting `site` directory is pushed to the `gh pages` branch in your repository. From that point on, github takes care of the rest.
 
+
+### Repository Description
+
+Often overlooked, but this is right on top of your repository and hence the absolute perfect place to link to your project website. Hence, a cookiecutter-generated sentence to put there would be;
+
+> {{cookiecutter.short_description}}, cf. [https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}/
+
 2.3 Docker
 ----------
 
