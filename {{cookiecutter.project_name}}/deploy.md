@@ -207,7 +207,7 @@ What happens under the hood is that a `mkdocs build` is executed, and then the r
 
 Often overlooked, but this is right on top of your repository and hence the absolute perfect place to link to your project website. Hence, a cookiecutter-generated sentence to put there would be;
 
-> {{cookiecutter.short_description}}, cf. [https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}/
+> {{cookiecutter.short_description}}, cf. https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}
 
 2.3 Docker
 ----------
