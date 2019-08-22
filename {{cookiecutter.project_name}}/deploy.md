@@ -127,8 +127,6 @@ Follow these steps:
 2 Distribution workflows
 ========================
 
-**TODO**: Describe the workflow to work with releases and versioning etc.
-
 This part is about publishing your project on PyPi.
 
 2.1 Pypi
@@ -167,9 +165,9 @@ Every good open source project at least consists of a bit of documentation. A pa
 
 ### Tools
 
-We will use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) time. This generates very nice webpages and is -in my humble opinion- a bit more modern than Sphinx (which is also good!).
+We will use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and is -in my humble opinion- a bit more modern than Sphinx (which is also good!).
 
-The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), which is the most basic formatted text format there is. Readmes and this even this deployment document are written in markdown itself. In that sense, we gain consistency, all the stuff that we want to communicate is written in markdown: 
+The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), which is the most basic formatted text format there is. Readmes and even this deployment document are written in markdown itself. In that sense, we gain consistency, all the stuff that we want to communicate is written in markdown: 
 
 - readme's in the repo
 - text cells in jupyter notebooks
