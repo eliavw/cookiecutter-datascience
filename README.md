@@ -3,8 +3,10 @@ Cookiecutter-datascience
 
 Cookiecutter template for datascience.
 
+TODOS
+-----
 
-**TODO**: Describe the workflow to work with releases and versioning etc.
-**TODO**: Describe how to convert notebooks to documentation pages.
-**TODO**: Describe to generate API docs from docstrings.
-**TODO**: Unittest documentation and code style.
+- Describe the workflow to work with releases and versioning etc.
+- Describe how to convert notebooks to documentation pages.
+- Describe to generate API docs from docstrings.
+- Unittest documentation and code style (black).
