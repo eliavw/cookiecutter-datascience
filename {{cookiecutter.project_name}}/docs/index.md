@@ -1,5 +1,13 @@
 # Welcome
 
+This is the documentation of the {{cookiecutter.package_name}} package. 
+
+## Short Description
+
+{{cookiecutter.short_description}}
+
+# Info about the documentation
+
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 
 ## Tests
@@ -17,7 +25,7 @@ msg = "Hello world"
 print(msg)
 ```
 
-And you can add all kinds of cool blocks to draw addition to something,
+And you can add all kinds of cool blocks to draw attention to something,
 
 !!! example
     This is a perfect example of such an `admonition` block as they are called. They come in many types and their icons adapt automagically.
