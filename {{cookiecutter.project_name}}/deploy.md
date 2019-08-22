@@ -127,6 +127,8 @@ Follow these steps:
 2 Distribution workflows
 ========================
 
+**TODO**: Describe the workflow to work with releases and versioning etc.
+
 This part is about publishing your project on PyPi.
 
 2.1 Pypi
