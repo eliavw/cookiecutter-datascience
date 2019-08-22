@@ -87,10 +87,10 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}} --displa
 
 One fundamental assumption is the following; 
 
-> All code in this repository is a) part of a python package or b) a standalone script.
+> All code in this repository belongs to one of the two following categories: source code or standalone scripts.
 
-- Code in [src](./src) is considered as a Python package.
-- Code in [scripts](./scripts) or [note](./note), the code acts as standalone scripts.
+- Code in [src](./src) is considered source code. It composes a Python package.
+- Code in [scripts](./scripts) or [note](./note) acts as standalone scripts.
 
 This means that even our own code has to be installed before we are able to use it. This seems a bit tedious but has some important advantages too:
 
@@ -109,8 +109,6 @@ python setup.py develop # or `install`
 What is the difference between `develop` or `install`? When you install the package with the `develop` flag, symlinks are created from yoru code to the python installation. That means that every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you'd want: to see your changes reflected immediately.
 
 The install option just copies your code as it is at time of installation and install the package in the python environment. This mimics what a third party would do.
-
-
 
 
 1.5 CI (Travis)
