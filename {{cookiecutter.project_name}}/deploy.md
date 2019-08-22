@@ -120,7 +120,7 @@ Follow these steps:
 1. Go to the [Travis](https://travis-ci.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}) page of this repo.
 2. See if it ran.
 
-**Note:** The tests depend on our **local dependecy managment**. Why? Because we have full control of the Travis servers running our tests. Therefore, we can simply treat it as a computer we'd control. We only need to fall back on remote dependency managment if other people need to get our code up and running, without our intervention.
+**Note:** The tests depend on our **local dependency managment**. Why? Because we have full control of the Travis servers running our tests. Therefore, we can simply treat it as a computer we control. We only need to fall back on remote dependency managment if other people need to get our code up and running, without our intervention.
 
 
 
