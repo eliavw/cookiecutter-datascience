@@ -94,9 +94,8 @@ One fundamental assumption is the following;
 
 This means that even our own code has to be installed before we are able to use it. This seems a bit tedious but has some important advantages too:
 
-1. Our scripts will consider our own algorithms and external competitors just as packages that have to be imported. This forces us to explicitly declare everything we want to use.
-2. Since our own algorithm will have to behave just like the competition, this enhances modularity in our code.
-3. If we build it like a package from the start on our local machine, the transition to an actual package will be a lot smoother afterwards.
+1. Our scripts will consider our own algorithm(s) and external competitors both as packages to be imported. Putting these on equal footing enforces code quality (e.g., modularity, API-design, ...) and reproducibility.
+2. If we build it like a package from the start on our local machine, the transition to an actual publishable package will be a lot smoother afterwards. In other words, we will try to get it right from the start.
 
 ### Installation instructions
 
