@@ -12,12 +12,11 @@ cookiecutter gh:eliavw/cookiecutter-datascience
 ``` 
 
 
-TODOS
+Todo
 -----
 
-This is still a work in progress and will likely never be finished. However, always a bit better! 
+This will always be a work in progress. Current workflows that are potentially interesting to add:
 
-- Describe the workflow to work with releases and versioning etc.
-- Describe how to convert notebooks to documentation pages.
-- Describe to generate API docs from docstrings.
-- Unittest documentation and code style (black).
+- Versioning and releases of pip packages
+- Easy conversion of notebooks to webpages for the doc site.
+- Generation of API-docs from docstrings
