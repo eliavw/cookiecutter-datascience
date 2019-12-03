@@ -87,7 +87,7 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}} --displa
 
 One fundamental assumption is the following; 
 
-> All code in this repository belongs to one of the two following categories: source code or standalone scripts.
+> All code in this repository belongs to one of the two following categories: **source code** or **executable scripts**.
 
 - Code in [src](./src) is considered source code. It composes a Python package.
 - Code in [scripts](./scripts) or [note](./note) acts as standalone scripts.
