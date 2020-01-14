@@ -18,3 +18,6 @@ This is still a work in progress and will likely never be finished. However, alw
 
 - Describe to generate API docs from docstrings.
 - Unittest documentation and code style (black).
+- Automatic test generation from notebooks
+- CI on Github
+- GIT Hooks.
