@@ -10,3 +10,5 @@ dependencies:
   - mkdocs-material
   - pygments
   - pymdown-extensions
+  - pip:
+      - semantic-version
