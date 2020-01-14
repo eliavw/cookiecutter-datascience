@@ -6,6 +6,15 @@ Add a short description here!
 
 A longer description of your project goes here...
 
-## Installation
+## Usage
+
+For a local install, `cd` to the root of this repository and simply; 
+
+```
+python setup.py develop
+```
+
+
+## Administration
 
 Open the folder [note/deploy](./note/deploy) for notebooks that contain annotated scripts for the different administrative tasks you may want to undertake with this software project.
