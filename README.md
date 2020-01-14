@@ -12,12 +12,10 @@ cookiecutter gh:eliavw/cookiecutter-datascience
 ``` 
 
 
-TODOS
------
+Future work
+-----------
 
-This is still a work in progress and will likely never be finished. However, always a bit better! 
+This is still a work in progress and will likely never be finished. However, always a bit better! Some ideas for new, extra features are;
 
-- Describe the workflow to work with releases and versioning etc.
-- Describe how to convert notebooks to documentation pages.
 - Describe to generate API docs from docstrings.
 - Unittest documentation and code style (black).
