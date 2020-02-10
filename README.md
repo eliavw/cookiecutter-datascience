@@ -1,7 +1,7 @@
 Cookiecutter-datascience
 ========================
 
-Cookiecutter template for datascience.
+Cookiecutter template for datascience projects.
 
 Usage
 -----
