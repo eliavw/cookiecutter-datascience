@@ -11,6 +11,7 @@ dependencies:
   - pygments
   - pip:
       - semantic-version
+      - ipykernel
       - mkdocs-minify-plugin
       - pymdown-extensions
       - nb-black
