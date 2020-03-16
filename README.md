@@ -22,3 +22,8 @@ This is still a work in progress and will likely never be finished. However, it 
 - Unittest docs and code style
 - Generate tests from notebooks
 - git hooks
+
+Unintended Side-Effect
+----------------------
+
+_This_ repo is also basically an example of how _you_ can also make your own cookiecutter!
