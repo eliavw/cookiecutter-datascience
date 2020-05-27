@@ -1,14 +1,29 @@
-# Notebooks
-.ipynb_checkpoints
-*/ipynb_checkpoints/*
+# Ignore out/tmp directories
+tmp/
+**/tmp/
 
-# IDE
-.idea
-*/.idea/*
+out/
+**/out/
 
 # Python
-__pycache__
-*/pycache/*
+__pycache__/
+**/__pycache__
+**/__pycache__/
+
+# iPython Notebooks
+**/.ipynb_checkpoints
+**/.ipynb_checkpoints/
+
+# IDEs
+
+## From pycharm
+.idea/
+.ipynb_checkpoints/
+**/.idea
+
+## VSCODE
+.vscode/
+*/.vscode/*
 
 # Packaging
 .Python
