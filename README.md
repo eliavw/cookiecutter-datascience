@@ -14,10 +14,12 @@ cookiecutter gh:eliavw/cookiecutter-datascience
 Future work
 -----------
 
-This is still a work in progress and will likely never be finished. However, it can be improved. Some ideas for new, extra features are;
+This is still a work in progress and will likely never be finished. However, everything can always be done better. 
+
+Some ideas for new, extra features are;
 
 - CI on github
-- Edit `setup.py` so that it parses `dependencies-deploy.yaml` and adds them to `setup.cfg` automatically. Also, as a policy adopt pip first, conda second. For python packages, everything has to be in pip anyways.
+- Edit `setup.py` so that it parses `dependencies-deploy.yaml` and adds them to `setup.cfg` automatically. Also, as a policy; adopt pip first, conda second. For python packages, everything has to be in pip anyways.
 - Auto-generate API docs from docstrings
 - Unittest docs and code style
 - Generate tests from notebooks
