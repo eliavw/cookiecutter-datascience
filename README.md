@@ -18,11 +18,11 @@ This is still a work in progress and will likely never be finished. However, eve
 
 Some ideas for new, extra features are;
 
--[ ] Test: CI on github
--[ ] Test: Notebooks as integration tests
--[ ] DM: Edit `setup.py` so that it parses `dependencies-deploy.yaml` and adds them to `setup.cfg` automatically. Also, as a policy; adopt pip first, conda second. For python packages, everything has to be in pip anyways.
--[ ] Docs: Auto-generate API docs from docstrings
--[ ] Test: Unittest docs and code style
+- [ ] Test: CI on github
+- [ ] Test: Notebooks as integration tests
+- [ ] DM: Edit `setup.py` so that it parses `dependencies-deploy.yaml` and adds them to `setup.cfg` automatically. Also, as a policy; adopt pip first, conda second. For python packages, everything has to be in pip anyways.
+- [ ] Docs: Auto-generate API docs from docstrings
+- [ ] Test: Unittest docs and code style
 
 
 Side-effect
