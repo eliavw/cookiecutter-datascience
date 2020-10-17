@@ -424,7 +424,7 @@ class StarAiFlow(Flow):
         return dict(model=None, fit_time_s=None)
 
     def ask_algo(self, test):
-        assert model is not None, "You need a model before you can call this function"
+        assert self.model is not None, "You need a model before you can call this function"
         return dict(predictions=None, predict_time_s=None)
 
     # Analysis
