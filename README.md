@@ -25,7 +25,7 @@ Some ideas for new, extra features are;
 - Generate tests from notebooks
 - git hooks
 
-Unintended side-effect
+Side-effect
 ----------------------
 
 _This_ repo is also basically an example of how _you_ can also make your own cookiecutter!
