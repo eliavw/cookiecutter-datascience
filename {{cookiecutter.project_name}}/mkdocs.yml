@@ -1,3 +1,5 @@
+# Configuration file for MKDOCS, a framework to generate clean docs for projects.
+
 # Project information
 site_name: '{{cookiecutter.project_name}}'
 site_description: 'Documentation website for {{cookiecutter.project_name}}'
@@ -55,5 +57,3 @@ markdown_extensions:
 # To make mathjax work you also need this
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-
-  

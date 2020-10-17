@@ -12,13 +12,13 @@ __pycache__/
 
 # iPython Notebooks
 **/.ipynb_checkpoints
-**/.ipynb_checkpoints/
+**/.ipynb_checkpoints/*
+.ipynb_checkpoints/*
 
 # IDEs
 
-## From pycharm
+## Pycharm
 .idea/
-.ipynb_checkpoints/
 **/.idea
 
 ## VSCODE

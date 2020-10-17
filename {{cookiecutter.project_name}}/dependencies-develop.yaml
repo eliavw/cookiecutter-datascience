@@ -1,4 +1,4 @@
-name: eliatest
+name: {{cookiecutter.project_name}}
 channels:
   - defaults
   - conda-forge
