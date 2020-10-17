@@ -1,9 +1,9 @@
 {
     "project_name": "project-name",
+    "jupyter_kernel_name": "project-name",
     "package_name": "package-name",
     "author_name": "Elia vw",
     "author_email": "elia.vw@gmail.com",
-    "travis_email": "elia.vanwolputte@gmail.com",
     "github_username": "eliavw",
     "short_description": "A short description of this piece of code.",
     "license": "mit"

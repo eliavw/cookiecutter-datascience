@@ -10,6 +10,4 @@ dependencies:
     - scipy
     - pandas
     - ipython
-    - matplotlib
     - scikit-learn
-    - mercs

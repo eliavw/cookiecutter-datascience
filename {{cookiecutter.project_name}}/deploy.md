@@ -25,7 +25,7 @@ git add .
 git commit -m "First commit"
 ```
 
-For the remote repository, do;
+For the remote repository, make a github repository named {{cookiecutter.project_name}}, then do;
 
 ```bash
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git
@@ -54,9 +54,11 @@ git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecu
 
 ### Introduction
 
-This cookiecutter is set up for optimal use with [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf), for **local dependency managment**. The takeaway is this; _for local dependency managment, we rely on conda and nothing else._
+For **local dependency managment** (LDM), we rely on [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
 
-Note that this has nothing to do with **remote dependency managment**. This is what you need to take care of when preparing a _release_ of your code which goes via [PyPi](https://pypi.org/) or alternatives. We treat that as an independent problem. Mixing remote and local dependency managment tends to add complexity instead of removing it.
+This is completely independent from **remote dependency managment** (RDM). RDM is managing the dependencies on a user's machine, a user who is trying to run your code. For instance, in a python project, you release your piece of code (a "package" in python lingo) through [PyPi](https://pypi.org/). In that _pypi-release_, you need to specify what you expect to find on a user's machine to make your code run.
+
+In conclusion, LDM and RDM are kept completely indepedent. Mixing them adds complexity instead of removing it. Obviosuly they should be kept mutually consistent; but the way in which we actually manage LDM and RDM operate separately.
 
 ### Workflow
 
@@ -79,8 +81,9 @@ To add your isolated python installation (i.e., the one in your new conda enviro
 
 ```bash
 conda activate {{cookiecutter.project_name}}
-python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
+python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.jupyter_kernel_name}}"
 ```
+
 
 1.4 Local Installation
 ----------------------
@@ -90,7 +93,7 @@ One fundamental assumption is the following;
 > All code in this repository belongs to one of the two following categories: **source code** or **executable scripts**.
 
 - Code in [src](./src) is considered source code. It composes a Python package.
-- Code in [scripts](./scripts) or [note](./note) acts as standalone scripts.
+- Code in [scripts](./scripts) or [note](./note) are as standalone scripts.
 
 This means that even our own code has to be installed before we are able to use it. This seems a bit tedious but has some important advantages too:
 
@@ -108,20 +111,6 @@ python setup.py develop # or `install`
 What is the difference between `develop` or `install`? When you install the package with the `develop` flag, symlinks are created from your code to the python installation. That means that every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you would want: to see your changes reflected immediately.
 
 The install option just copies your code as it is at time of installation and install the package in the python environment. This mimics what a third party would do.
-
-
-1.5 CI (Travis)
----------------
-
-Do not allow yourself to proceed without at least accumulating some tests. Therefore, we've set out to intigrate [CI](https://en.wikipedia.org/wiki/Continuous_integration) (i.e. [Travis](https://travis-ci.com)) right from the start.
-
-Follow these steps:
-
-1. Go to the [Travis](https://travis-ci.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}) page of this repo.
-2. See if it ran.
-
-**Note:** The tests depend on our **local dependency managment**. Why? Because we have full control of the Travis servers running our tests. Therefore, we can simply treat it as a computer we control. We only need to fall back on remote dependency managment if other people need to get our code up and running, without our intervention.
-
 
 
 2 Distribution workflows
