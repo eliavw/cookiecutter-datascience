@@ -20,7 +20,7 @@ Some ideas for new, extra features are;
 
 - [ ] Test: CI on github
 - [ ] Test: Notebooks as integration tests
-- [ ] DM: Edit `setup.py` so that it parses `dependencies-deploy.yaml` and adds them to `setup.cfg` automatically. Also, as a policy; adopt pip first, conda second. For python packages, everything has to be in pip anyways.
+- [ ] DM: Keep ``setup.cfg`` and ``dependencies-deploy.yaml`` consistent automatically.
 - [ ] Docs: Auto-generate API docs from docstrings
 - [ ] Test: Unittest docs and code style
 
