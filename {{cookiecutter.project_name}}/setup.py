@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     Setup file for {{cookiecutter.project_name}}.
     Use setup.cfg to configure your project.

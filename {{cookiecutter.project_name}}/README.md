@@ -2,12 +2,12 @@
 
 {{cookiecutter.short_description}}
 
-## Usage
+## Setup
 
 For a local install, `cd` to the root of this repository and simply; 
 
 ```
-python setup.py develop
+pip install -e .
 ```
 
 ## Documentation

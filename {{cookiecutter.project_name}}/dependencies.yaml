@@ -1,13 +1,11 @@
 name: {{cookiecutter.project_name}} 
 channels:
   - defaults
-  - conda-forge
-  - pytorch
 dependencies:
   - python>=3.6
   - pip:
-    - numpy
-    - scipy
-    - pandas
     - ipython
+    - numpy
+    - pandas
+    - scipy
     - scikit-learn

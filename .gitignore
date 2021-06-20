@@ -1,4 +1,4 @@
-# Ignore these output/temporary directories
+# Out & tmp directories
 tmp/
 **/tmp/
 
@@ -7,23 +7,19 @@ out/
 
 # Python
 __pycache__/
-**/__pycache__
 **/__pycache__/
 
-# iPython Notebooks
-**/.ipynb_checkpoints
+# Notebooks
 **/.ipynb_checkpoints/
+.ipynb_checkpoints/
 
 # IDEs
-
-## From pycharm
 .idea/
-.ipynb_checkpoints/
 **/.idea
 
 ## VSCODE
 .vscode/
-*/.vscode/*
+**/.vscode
 
 # Packaging
 .Python
@@ -46,7 +42,5 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Sphinx documentation
+# Docs
 docs/_build/
-
-

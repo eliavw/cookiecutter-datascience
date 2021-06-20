@@ -6,12 +6,14 @@ channels:
 dependencies:
   - pytest
   - jupyterlab
-  - mkdocs
-  - mkdocs-material
-  - pygments
   - pip:
-      - semantic-version
-      - ipykernel
+      - ipykernel # ipython
+      - nb-black  # black codeformatter in notebooks
+      # docs
+      - mkdocs
+      - mkdocs-material
+      - pygments
       - mkdocs-minify-plugin
       - pymdown-extensions
-      - nb-black
+      # packaging
+      - semantic-version
