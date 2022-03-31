@@ -1,6 +1,6 @@
-# {{cookiecutter.project_name}}
+# Backend info
 
-Deployment information.
+Development & deployment information for this project.
 
 1 Development workflows
 =======================
@@ -183,6 +183,12 @@ mkdocs serve
 ```
 
 and surf to [localhost:8000](http://localhost:8000). Note that this server does automatic rebuilds, so any changes on disk are reflected immediately.
+
+One-liner for the lazy,
+
+```shell
+mkdocs build;mkdocs serve
+```
 
 ### Convert tutorial notebooks to documentation pages
 
