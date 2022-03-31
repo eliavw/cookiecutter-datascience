@@ -5,23 +5,27 @@ tmp/
 out/
 **/out/
 
+# IDEs
+## Jetbrains
+.idea/
+**/.idea
+
+## VSCode
+.vscode/
+**/.vscode
+
+# Docs
+docs/_build/
+
 # Python
 __pycache__/
 **/__pycache__/
 
-# Notebooks
+## Notebooks
 **/.ipynb_checkpoints/
 .ipynb_checkpoints/
 
-# IDEs
-.idea/
-**/.idea
-
-## VSCODE
-.vscode/
-**/.vscode
-
-# Packaging
+## Packaging
 .Python
 build/
 develop-eggs/
@@ -42,5 +46,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Docs
-docs/_build/
+# OS
+## MacOS
+*.DS_Store
