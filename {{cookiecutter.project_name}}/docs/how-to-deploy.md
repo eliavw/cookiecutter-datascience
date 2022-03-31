@@ -2,11 +2,9 @@
 
 Development & deployment information for this project.
 
-1 Development workflows
-=======================
+## Development Workflows
 
-1.1 Start project
------------------
+### Start Project with Cookiecutter
 
 Using the power of [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/), this single command provides a pretty solid starting point for any new project.
 
@@ -14,8 +12,7 @@ Using the power of [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/
 cookiecutter gh:{{cookiecutter.github_username}}/cookiecutter-datascience
 ```
 
-1.2 git
--------
+### git
 
 Version control goes without saying. For the local repository,
 
@@ -35,7 +32,7 @@ git push origin master
 
 and that's it for git.
 
-### One-liners
+#### One-liners
 
 We can summarize the above procedure in two one-liners, should you care about doing this fast.
 
@@ -49,10 +46,9 @@ and
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git; git remote -v; git push origin master
 ```
 
-1.3 Conda Environments
-----------------------
+### Conda Environments
 
-### Introduction
+#### Introduction
 
 For **local dependency managment** (LDM), we rely on [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
 
@@ -60,7 +56,7 @@ This is completely independent from **remote dependency managment** (RDM). RDM i
 
 In conclusion, LDM and RDM are managed independently, because mixing them adds complexity instead of removing it. This has one important downside: **they need to be kept mutually consistent, manually**. This is the price we pay for isolation.
 
-### Workflow
+#### Conda Workflow
 
 To create our default environment,
 
@@ -79,7 +75,7 @@ Some dependencies are relevant during development, but not for deployment. For i
 
 Note that this particular distinction is still different from the distinction between LDM and RDM made above. Essentially, RDM is about ensuring that a user that downloads your code has the same dependencies as specified in your deployment environment.
 
-### Jupyterlab
+#### Expose Conda to Jupyterlab
 
 To add your isolated python installation (i.e., the one in your new conda environment) to the list of *"kernels"* found by Jupyter, execute the following.
 
@@ -89,8 +85,7 @@ python -m ipykernel install --user --name {{cookiecutter.project_name}}
 ```
 
 
-1.4 Local Installation
-----------------------
+### Local Installation
 
 One fundamental assumption is the following; 
 
@@ -104,7 +99,7 @@ This means that even our own code has to be installed before we are able to use 
 1. Scripts see our own algorithm(s) and external competitors both as packages to be imported. This equal footing enforces code quality (e.g., modularity, API-design, ...) and reproducibility.
 2. Structuring our code immediately as a package on our local machine, makes the transition to an actual publishable package a lot smoother. In this way, we try to get it right from the start.
 
-### Installation instructions
+#### Python Package Local Install
 
 To install, activate the conda environment and execute this line of code.
 
@@ -115,19 +110,17 @@ pip install -e .
 Every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you want: to see your changes reflected immediately during development.
 
 
-2 Distribution workflows
-========================
+## Distribution workflows
 
 This part is about publishing your project on PyPi.
 
-2.1 PyPi
---------
+### PyPi
 
 Make your project publicly available on the Python Package Index, [PyPi](https://pypi.org/). To achieve this, we need **remote dependency managment**, since you want your software to run without forcing users to recreate your conda environments. All dependencies have to be managed, automatically, during installation. To make this work, we need to do some extra work.
 
 We follow the steps as outlined in the most basic (and official) [PyPi tutorial](https://packaging.python.org/tutorials/packaging-projects/).
 
-### Generate distribution archives
+#### Generate distribution archives
 
 Generate distribution packages for the package. These are archives that are uploaded to the Package Index and can be installed by pip.
 
@@ -150,11 +143,11 @@ To make your package end up in the actual PyPi, the procedure is almost as simpl
 python -m twine upload --repository-url https://pypi.org/legacy/ dist/*
 ```
 
-2.2 Docs
---------
+### Docs
+
 Every good open source project has at least a bit of documentation. A part of this documentation is generated from decent docstrings you wrote together with your code.
 
-### Tools
+#### MKdocs Introduction 
 
 We use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than Sphinx (which is also great!).
 
@@ -166,7 +159,7 @@ The main upside of `mkdocs` is the fact that its source files are [markdown](htt
 
 This means that we can write everything once, and link it together. All the formats are the same, hence trivially compatible.
 
-### Basic commands
+#### Basic MKdocs Commands
 
 This cookiecutter already contains the [mkdocs.yml](mkdocs.yml) file, which is -unsurprisingly- the configuration file for your mkdocs project. Using this cookiecutter, you can focus on content. Alongside this configuration file, we also included a demo page; [index.md](./docs/index.md), which is the home page of the documentation website. 
 
@@ -190,7 +183,7 @@ One-liner for the lazy,
 mkdocs build;mkdocs serve
 ```
 
-### Convert tutorial notebooks to documentation pages
+#### Convert Tutorial Notebooks to Docs
 
 Notebooks in `note/tutorial` can be auto-exported to a markdown document and added in the `docs` folder,
 
@@ -198,7 +191,7 @@ Notebooks in `note/tutorial` can be auto-exported to a markdown document and add
 jupyter nbconvert note/tutorial/*.ipynb --to markdown --output-dir=docs
 ```
 
-### Hosting on Github
+#### Hosting Docs on Github
 
 Now, the last challenge is to make this website available over the internet. Luckily, mkdocs makes this [extremely easy](https://www.mkdocs.org/user-guide/deploying-your-docs/) when you want to host on [github pages](https://pages.github.com/)
 
@@ -217,9 +210,10 @@ Often overlooked, but this is right on top of your repository and hence the abso
 
 > {{cookiecutter.short_description}}, cf. https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}
 
+N.B. You need to do this manually!
 
-2.3 Docker
-----------
 
-Reproducible containers in their most popular form. Todo.
+### Docker
+
+Reproducible containers in their most popular form. WIP.
 

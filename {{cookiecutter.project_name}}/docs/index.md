@@ -1,16 +1,19 @@
 # Welcome
 
-This is the documentation of the {{cookiecutter.package_name}} package. 
+This is a demo documentation index page of the {{cookiecutter.package_name}} package. 
 
 ## Short Description
 
 {{cookiecutter.short_description}}
 
-# Info about the documentation
+## Info about the documentation
 
 For full documentation visit [mkdocs.org](https://mkdocs.org).
 
-## Tests
+Some useful hints:
+- Table of contents only works properly if there is one (1) level-one heading. (Like in this file)
+
+### Tests
 
 Equations go like this
 
@@ -32,14 +35,14 @@ And you can add all kinds of cool blocks to draw attention to something,
 
 Cf. the github source (click the edit button) to see how all of this came to be.
 
-## Commands
+### Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
 
-## Project layout
+### Project layout
 
     mkdocs.yml    # The configuration file.
     docs/
