@@ -6,6 +6,7 @@ channels:
 dependencies:
   - pytest
   - jupyterlab
+  - pip
   - pip:
       - ipykernel # ipython
       - nb-black  # black codeformatter in notebooks
