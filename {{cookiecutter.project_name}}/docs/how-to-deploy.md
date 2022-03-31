@@ -75,7 +75,9 @@ conda activate {{cookiecutter.project_name}}
 conda env update -n {{cookiecutter.project_name}} -f dependencies-develop.yaml
 ```
 
-Some dependencies are relevant for development, but not for deployment. For instance any tool that generates documentation websites (e.g. `mkdocs`) is useful for development, but has nothing to do with the actual functionality required during deployment. As such, you need to two `yaml` files, to make that distinction. Note that this distinction is still seperate from the distinction between LDM and RDM made above.
+Some dependencies are relevant during development, but not for deployment. For instance any tool that generates documentation websites (e.g. `mkdocs`) is useful for development, but has nothing to do with the actual functionality of your code. As such, we need two `yaml` files, to make that distinction. 
+
+Note that this particular distinction is still different from the distinction between LDM and RDM made above. Essentially, RDM is about ensuring that a user that downloads your code has the same dependencies as specified in your deployment environment.
 
 ### Jupyterlab
 
