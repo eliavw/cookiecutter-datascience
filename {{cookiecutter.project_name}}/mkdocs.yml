@@ -10,7 +10,7 @@ repo_name: '{{cookiecutter.github_username}}/{{cookiecutter.project_name}}'
 repo_url: 'https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}'
 
 # Copyright
-copyright: 'Copyright &copy; 2015 - 2019 {{cookiecutter.author_name}}'
+copyright: 'Copyright &copy; 2015 - {{cookiecutter.year}} {{cookiecutter.author_name}}'
 
 # Configuration
 theme:
