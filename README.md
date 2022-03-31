@@ -5,7 +5,7 @@ Cookiecutter template for datascience projects.
 
 Usage
 -----
-To start a new project from this cookiecutter, install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) _(duh)_ and then do;
+To start a new project from this cookiecutter, install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) _(obviously...)_ and then do;
 
 ```bash
 cookiecutter gh:eliavw/cookiecutter-datascience
