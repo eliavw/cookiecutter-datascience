@@ -85,7 +85,7 @@ To add your isolated python installation (i.e., the one in your new conda enviro
 
 ```shell
 conda activate {{cookiecutter.project_name}}
-python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.jupyter_kernel_name}}"
+python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
 ```
 
 
@@ -166,7 +166,7 @@ The main upside of `mkdocs` is the fact that its source files are [markdown](htt
 
 This means that we can write everything once, and link it together. All the formats are the same, hence trivially compatible.
 
-### Procedure
+### Basic commands
 
 This cookiecutter already contains the [mkdocs.yml](mkdocs.yml) file, which is -unsurprisingly- the configuration file for your mkdocs project. Using this cookiecutter, you can focus on content. Alongside this configuration file, we also included a demo page; [index.md](./docs/index.md), which is the home page of the documentation website. 
 
@@ -183,6 +183,14 @@ mkdocs serve
 ```
 
 and surf to [localhost:8000](http://localhost:8000). Note that this server does automatic rebuilds, so any changes on disk are reflected immediately.
+
+### Convert tutorial notebooks to documentation pages
+
+Notebooks in `note/tutorial` can be auto-exported to a markdown document and added in the `docs` folder,
+
+```shell
+jupyter nbconvert note/tutorial/*.ipynb --to markdown --output-dir=docs
+```
 
 ### Hosting on Github
 
