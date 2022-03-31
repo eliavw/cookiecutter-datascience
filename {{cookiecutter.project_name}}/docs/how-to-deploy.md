@@ -85,7 +85,7 @@ To add your isolated python installation (i.e., the one in your new conda enviro
 
 ```shell
 conda activate {{cookiecutter.project_name}}
-python -m ipykernel install --user --name {{cookiecutter.project_name}} --display-name "{{cookiecutter.project_name}}"
+python -m ipykernel install --user --name {{cookiecutter.project_name}}
 ```
 
 
