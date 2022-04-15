@@ -27,7 +27,7 @@ For the remote repository, make a github repository named `{{cookiecutter.projec
 ```shell
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git
 git remote -v
-git push origin master
+git push origin main
 ```
 
 and that's it for git.
@@ -43,7 +43,7 @@ git init; git add .; git commit -m "First commit";
 and
 
 ```shell
-git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git; git remote -v; git push origin master
+git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git; git remote -v; git push origin main
 ```
 
 ### Conda Environments
