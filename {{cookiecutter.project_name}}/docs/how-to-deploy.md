@@ -50,11 +50,12 @@ git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecu
 
 #### Introduction
 
-For **local dependency managment** (LDM), we rely on [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
+For **local dependency managment** (LDM), we rely on [conda](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf). This is completely independent from **remote dependency managment** (RDM). 
 
-This is completely independent from **remote dependency managment** (RDM). RDM is managing the dependencies on a user's machine, a user who is trying to run your code. For instance, in a python project, you release your piece of code (a "package" in python lingo) through [PyPi](https://pypi.org/). In that _pypi-release_, you need to specify what you expect to find on a user's machine to make your code run.
+- RDM is managing the dependencies on _the user's_ machine, e.g. a user who is trying to run your code. For instance, in a python project, you release your piece of code (a "package" in python lingo) through [PyPi](https://pypi.org/). In that _pypi-release_, you need to specify what you expect to find on a user's machine to make your code run. 
+- LDM is about making the code run on _our_ machines. This matters for several reasons. First, you yourself may occasionally switch machines (e.g. laptop/desktop or home/office, etc). Second, team members working on the same codebase typically do not share one single machine on which they do so. Hence, team members also need their respective machines to be configured similarly. This is the programmer equivalent of the hollywood trope "synchronize watches".
 
-In conclusion, LDM and RDM are managed independently, because mixing them adds complexity instead of removing it. This has one important downside: **they need to be kept mutually consistent, manually**. This is the price we pay for isolation.
+In conclusion, LDM and RDM are different and therefore managed independently: mixing them adds complexity instead of removing it. This has one important downside: **they need to be kept mutually consistent, manually**. This is the price we pay for isolation.
 
 #### Conda Workflow
 
@@ -101,22 +102,22 @@ This means that even our own code has to be installed before we are able to use 
 
 #### Python Package Local Install
 
-To install, activate the conda environment and execute this line of code.
+To install, activate the conda environment (`conda activate {{cookiecutter.project_name}}`) and execute this line of code.
 
 ```shell
 pip install -e . 
 ```
 
-Every time you change something in your codebase, the installed package in your python environment will also change. Typically, this is what you want: to see your changes reflected immediately during development.
+Every time you change something in your codebase, the installed package in your python environment will change automatically. Typically, this is what you want: to see your changes reflected immediately during development.
 
 
 ## Distribution workflows
 
-This part is about publishing your project on PyPi.
+This part is about publishing your project on [PyPi](https://pypi.org/).
 
 ### PyPi
 
-Make your project publicly available on the Python Package Index, [PyPi](https://pypi.org/). To achieve this, we need **remote dependency managment**, since you want your software to run without forcing users to recreate your conda environments. All dependencies have to be managed, automatically, during installation. To make this work, we need to do some extra work.
+Make your project publicly available on the _Python Package Index_, [PyPi](https://pypi.org/). To achieve this, we need **remote dependency managment**, since you want your software to run without forcing users to recreate your conda environments. All dependencies have to be managed, automatically, during installation. To make this work, we need to do some extra work.
 
 We follow the steps as outlined in the most basic (and official) [PyPi tutorial](https://packaging.python.org/tutorials/packaging-projects/).
 
@@ -145,25 +146,25 @@ python -m twine upload --repository-url https://pypi.org/legacy/ dist/*
 
 ### Docs
 
-Every good open source project has at least a bit of documentation. A part of this documentation is generated from decent docstrings you wrote together with your code.
+Every good project has at least a bit of documentation. Part of this documentation is generated from decent docstrings you wrote together with your code. Writing functions without docstrings is a lot like playing russian roulette: at some point, you will regret the decision.
 
 #### MKdocs Introduction 
 
 We use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than Sphinx (which is also great!).
 
-The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), the most basic formatted text format there is. For instance, github readmes (including the one you are reading now) are also written in markdown. In that sense, we get consistency, all the stuff that we want to communicate is written in markdown: 
+The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), the most basic text format there is. For instance, github readmes (including the one you are reading now) are also written in markdown. This yields _consistency_: all the stuff that we want to communicate is written in markdown: 
 
 - readme's in the repo
 - text cells in jupyter notebooks
 - source files for the documentation site
 
-This means that we can write everything once, and link it together. All the formats are the same, hence trivially compatible.
+This means that we need to write everything once, and add it to docs if we want it to be there. All the formats are the same, hence trivially compatible.
 
 #### Basic MKdocs Commands
 
-This cookiecutter already contains the [mkdocs.yml](mkdocs.yml) file, which is -unsurprisingly- the configuration file for your mkdocs project. Using this cookiecutter, you can focus on content. Alongside this configuration file, we also included a demo page; [index.md](./docs/index.md), which is the home page of the documentation website. 
+This cookiecutter already contains the [mkdocs.yml](mkdocs.yml) file, which is -unsurprisingly- the configuration file for your mkdocs project. Using this cookiecutter, you can focus on content. Alongside this configuration file, we also included a demo page; [index.md](./docs/index.md), which will be the home page of the documentation website. 
 
-For a test drive, you need to know some commands. To build your website (i.e., generate html starting from your markdown sources), you do
+For a test drive, you need to know some commands. To build your website (generate html starting from your markdown sources), you do
 
 ```shell
 mkdocs build
@@ -195,7 +196,7 @@ jupyter nbconvert note/tutorial/*.ipynb --to markdown --output-dir=docs
 
 Now, the last challenge is to make this website available over the internet. Luckily, mkdocs makes this [extremely easy](https://www.mkdocs.org/user-guide/deploying-your-docs/) when you want to host on [github pages](https://pages.github.com/)
 
-```bash
+```shell
 mkdocs gh-deploy
 ```
 
@@ -210,7 +211,7 @@ Often overlooked, but this is right on top of your repository and hence the abso
 
 > {{cookiecutter.short_description}}, cf. https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.project_name}}
 
-N.B. You need to do this manually!
+N.B. This cannot be automated, you must do this manually. In fact, if you are reading this: do it **now**.
 
 
 ### Docker
