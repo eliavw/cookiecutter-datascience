@@ -150,7 +150,7 @@ Every good project has at least a bit of documentation. Part of this documentati
 
 #### MKdocs Introduction 
 
-We use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than Sphinx (which is also great!).
+We use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than [Sphinx](https://www.sphinx-doc.org/en/master/) (which is also great!).
 
 The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), the most basic text format there is. For instance, github readmes (including the one you are reading now) are also written in markdown. This yields _consistency_: all the stuff that we want to communicate is written in markdown: 
 
