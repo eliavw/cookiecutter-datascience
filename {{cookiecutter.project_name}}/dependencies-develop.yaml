@@ -8,6 +8,7 @@ dependencies:
   - jupyterlab
   - pip
   - pip:
+      - ipython
       - ipykernel # ipython
       - nb-black  # black codeformatter in notebooks
       # docs
