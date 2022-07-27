@@ -46,6 +46,32 @@ and
 git remote add origin git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git; git remote -v; git push origin main
 ```
 
+#### Notebooks, `git` and `merge conflict` hell
+
+Pro-tip: notebooks and git do not work well together, because notebooks mix code, outputs and comments all together. 
+That's what makes them great, but has a side-effect of making them absolutely horrible with git.
+For instance, notebooks even keep track of how many times a single cell has been executed! 
+That means that a notebook with identical code, comments and outputs can still cause some change to be tracked by git, despite the fact that absolutely nothing of any relevance changed.
+What makes this particularly bad is that
+- a) outputs can differ _wildly_ with only small (relevant) changes in code and
+- b) those outputs are being saved in the same file as the code itself and 
+- c) this causes _all_ the content (including code!) to shift from line to line, causing enormous diffs. This is because `git` basically works on the idea that line numbers mean something.
+
+Basically, this leads to two huge issues
+1. This makes it impossible for humans to follow what's going on wrt to changes being made. After all, `.ipynb` files are not designed to be human-readable, but are meant to be rendered in browser.
+2. In practice, this leads to _"merge-conflict-hell"_: typically, to solve merge conflicts, you dig into your code and see where the irreconcible diffs are. But, due to the former issue, this becomes a titanic (and pointless!) task when notebooks are involved.
+    
+TL;DR: keep your notebook outputs out of `git`, **always**. 
+
+How you accomplish the above is up to you, personally I have found the tool [nbstripout](https://github.com/kynan/nbstripout) to do the trick. 
+Just `cd` into the directory where you are working in, make sure you are on the correct branch in `git` and run this command;
+    
+```shell
+nbstripout --install
+```    
+and changes in your notebooks should not lead to content in your commits anymore.
+[Git hooks](https://www.atlassian.com/git/tutorials/git-hooks) would also be an option, but I never got those to work reliably. YMMV though.
+
 ### Conda Environments
 
 #### Introduction
@@ -148,9 +174,9 @@ python -m twine upload --repository-url https://pypi.org/legacy/ dist/*
 
 Every good project has at least a bit of documentation. Part of this documentation is generated from decent docstrings you wrote together with your code. Writing functions without docstrings is a lot like playing russian roulette: at some point, you will regret the decision.
 
-#### MKdocs Introduction 
+#### MkDocs Introduction 
 
-We use [Mkdocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than [Sphinx](https://www.sphinx-doc.org/en/master/) (which is also great!).
+We use [MkDocs](https://www.mkdocs.org/), with its [material](https://squidfunk.github.io/mkdocs-material/) theme. This generates very nice webpages and feels a bit more modern than [Sphinx](https://www.sphinx-doc.org/en/master/) (which is also great!).
 
 The main upside of `mkdocs` is the fact that its source files are [markdown](https://en.wikipedia.org/wiki/Markdown), the most basic text format there is. For instance, github readmes (including the one you are reading now) are also written in markdown. This yields _consistency_: all the stuff that we want to communicate is written in markdown: 
 
@@ -160,7 +186,7 @@ The main upside of `mkdocs` is the fact that its source files are [markdown](htt
 
 This means that we need to write everything once, and add it to docs if we want it to be there. All the formats are the same, hence trivially compatible.
 
-#### Basic MKdocs Commands
+#### Basic MkDocs Commands
 
 This cookiecutter already contains the [mkdocs.yml](mkdocs.yml) file, which is -unsurprisingly- the configuration file for your mkdocs project. Using this cookiecutter, you can focus on content. Alongside this configuration file, we also included a demo page; [index.md](./docs/index.md), which will be the home page of the documentation website. 
 
