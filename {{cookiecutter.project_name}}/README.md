@@ -6,7 +6,7 @@
 
 For a local install, `cd` to the root of this repository and simply; 
 
-```
+```shell
 pip install -e .
 ```
 
